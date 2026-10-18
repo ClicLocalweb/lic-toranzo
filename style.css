@@ -1,0 +1,349 @@
+/* Variables de color y tipografía */
+:root {
+    --primary-color: #7D8F69; /* Verde salvia oscuro */
+    --secondary-color: #A9B388; /* Verde oliva claro */
+    --accent-color: #D6A485; /* Tono tierra cálido / terracota suave */
+    --accent-hover: #C58F70;
+    --bg-color: #FDFBF7; /* Blanco roto cálido */
+    --text-dark: #3E3B38;
+    --text-light: #6A6560;
+    --white: #FFFFFF;
+    
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tipografía de encabezados */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(125, 143, 105, 0.3);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(214, 164, 133, 0.3);
+}
+
+.btn-large {
+    padding: 16px 36px;
+    font-size: 1.1rem;
+}
+
+/* Header y Navegación */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo a {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Sección Hero */
+.hero {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #FDFBF7 0%, #F1EFE7 100%);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    width: 100%;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #E2DFD2;
+    border-radius: 20px 100px 20px 20px; /* Toque orgánico y cálido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Sección Sobre Mí */
+.about {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* Sección Servicios */
+.services {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--accent-color);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    color: var(--text-light);
+}
+
+/* Sección Reserva / Contacto */
+.booking-banner {
+    background-color: var(--primary-color);
+    padding: 70px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.booking-banner h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.booking-banner p {
+    color: #EAECE6;
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 50px 0 20px 0;
+    text-align: center;
+}
+
+.footer-info h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    color: #A09E9C;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.footer-copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #5A5652;
+    color: #8C8884;
+    font-size: 0.85rem;
+}
+
+/* Media Queries (Responsive) */
+
+/* Tablets */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Escritorio Pequeño */
+@media (min-width: 992px) {
+    .header-content {
+        flex-wrap: nowrap;
+    }
+    
+    .nav {
+        margin-left: auto;
+        margin-right: 40px;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+    .nav {
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .nav-btn {
+        display: none; /* Oculta el botón en mobile header para evitar desorden, queda el del hero */
+    }
+}
