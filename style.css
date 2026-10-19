@@ -63,7 +63,7 @@ p {
   margin: auto;
 }
 
-/* Navegación */
+/* NAVEGACIÓN */
 
 .nav {
   display: flex;
@@ -104,7 +104,7 @@ p {
   color: var(--green);
 }
 
-/* Botones */
+/* BOTONES */
 
 .button {
   display: inline-flex;
@@ -132,7 +132,7 @@ p {
   border: 1px solid #b9c8bc;
 }
 
-/* Textos y títulos */
+/* TEXTOS */
 
 .eyebrow {
   font-size: .76rem;
@@ -142,7 +142,7 @@ p {
   font-weight: 700;
 }
 
-/* Portada */
+/* PORTADA */
 
 .hero {
   padding: 76px 0 92px;
@@ -160,6 +160,21 @@ p {
   right: -170px;
   top: 35px;
   z-index: -1;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 78px);
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
 }
 
 .hero p.lead {
@@ -192,7 +207,46 @@ p {
   display: inline-block;
 }
 
-/* Secciones */
+/* FOTOGRAFÍA PERSONAL */
+
+.hero-portrait {
+  position: relative;
+  max-width: 390px;
+  justify-self: end;
+  width: 100%;
+  padding: 12px;
+  border-radius: 190px 190px 26px 26px;
+  background: #e4e8dc;
+  box-shadow: var(--shadow);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 180px 180px 18px 18px;
+}
+
+.portrait-caption {
+  padding: 15px 8px 5px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.portrait-caption span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: "DM Sans", sans-serif;
+  font-size: .82rem;
+  font-weight: 500;
+}
+
+/* SECCIONES */
 
 .section {
   padding: 86px 0;
@@ -212,7 +266,7 @@ p {
   font-size: 1.05rem;
 }
 
-/* Sobre mí */
+/* SOBRE MÍ */
 
 .about-grid {
   display: grid;
@@ -270,7 +324,7 @@ p {
   background: #fffdf8;
 }
 
-/* Áreas de acompañamiento */
+/* ÁREAS DE ACOMPAÑAMIENTO */
 
 .cards {
   display: grid;
@@ -305,7 +359,7 @@ p {
   margin-top: 18px;
 }
 
-/* Enfoque profesional */
+/* ENFOQUE PROFESIONAL */
 
 .approach {
   display: grid;
@@ -334,7 +388,7 @@ p {
   padding: 5px 0;
 }
 
-/* Experiencia y formación */
+/* EXPERIENCIA Y FORMACIÓN */
 
 .experience {
   display: grid;
@@ -388,7 +442,7 @@ p {
   margin-top: 4px;
 }
 
-/* Contacto */
+/* CONTACTO */
 
 .contact {
   background: var(--sage);
@@ -426,7 +480,7 @@ p {
   color: var(--muted);
 }
 
-/* Pie de página */
+/* PIE DE PÁGINA */
 
 footer {
   padding: 28px 0;
@@ -441,13 +495,13 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Botón fijo para celulares */
+/* BOTÓN FIJO PARA CELULARES */
 
 .mobile-cta {
   display: none;
 }
 
-/* Diseño adaptable */
+/* ADAPTACIÓN A CELULARES */
 
 @media (max-width: 760px) {
   .wrap {
@@ -471,6 +525,16 @@ footer {
     height: 250px;
     right: -150px;
     top: 130px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-portrait {
+    max-width: 300px;
+    justify-self: center;
   }
 
   .section {
@@ -522,7 +586,7 @@ footer {
   }
 }
 
-/* Accesibilidad: reducir animaciones */
+/* ACCESIBILIDAD */
 
 @media (prefers-reduced-motion: reduce) {
   html {
